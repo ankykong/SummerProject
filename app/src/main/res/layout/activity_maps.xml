@@ -1,0 +1,103 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <fragment xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="591dp"
+        android:layout_alignTop="@id/inputLoc"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="0dp"
+        tools:context="com.example.portal.ui.maps.MapsActivity" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/groceries_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:onClick="onClick"
+            android:text="Groceries"
+            android:textColor="#1C9C20" />
+
+        <Button
+            android:id="@+id/restaurants_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:onClick="onClick"
+            android:text="Resteraunts"
+            android:textColor="#1C9C20" />
+
+
+        <Button
+            android:id="@+id/dept_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:onClick="onClick"
+            android:text="Clothes"
+            android:textColor="#1C9C20" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/inputLoc"
+        android:layout_width="278dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="@string/location"
+        android:inputType="textPostalAddress" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="127dp"
+        android:layout_height="67dp"
+        android:layout_alignRight="@id/inputLoc"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="284dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="-124dp"
+        android:onClick="onClick"
+        android:text="Search" />
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/restaurant_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/listButton"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClick"
+        android:text="Map/List" />
+
+
+</RelativeLayout>
